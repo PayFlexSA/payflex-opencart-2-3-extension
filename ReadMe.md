@@ -1,6 +1,6 @@
 PayFlex module for OpenCart
 
-PayFlex OpenCart Module v1.2 for OpenCart v2.3
+PayFlex OpenCart Module v1.0 for OpenCart v2.3
 -------------------------------------------------------
 
 INTEGRATION:
