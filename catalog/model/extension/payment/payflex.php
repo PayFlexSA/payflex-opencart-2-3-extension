@@ -213,6 +213,8 @@ class ModelExtensionPaymentpayflex extends Model {
 		foreach ($items as $i=>$item) {
 			$OrderBodyString .= $item . (($i < count($items)-1) ? ',' : '');
 		}
+
+		$plugin_version = '1.0.3';
 		// $this->get_return_url( $order )
 		$OrderBodyString .= '],
 			"merchant": {
@@ -223,7 +225,12 @@ class ModelExtensionPaymentpayflex extends Model {
 			"merchantReference": "'. $order['order_id'] .'",
 			"token": "'. $order['order_id'] .'",
 			"taxAmount": '. $this->currency->format($this->currency->convert($tax, $order['currency_code'], $order['currency_code'], $currency_code), $currency_code, false, false) .',
-			"shippingAmount":'. $this->currency->format($this->currency->convert($shipping, $order['currency_code'], $order['currency_code'], $currency_code), $currency_code, false, false) .'
+			"shippingAmount":'. $this->currency->format($this->currency->convert($shipping, $order['currency_code'], $order['currency_code'], $currency_code), $currency_code, false, false) .',
+			"merchantSystemInformation": {
+				"plugin_version": "'. $plugin_version .'",
+				"php_version": "' . PHP_VERSION . '",
+				"ecommerce_platform": "OpenCart ' . VERSION . '"
+			}
 		}';
 
 		// $this->log->write($OrderBodyString);
