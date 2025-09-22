@@ -249,6 +249,11 @@ class ControllerExtensionPaymentpayflex extends Controller {
 		$data['help_cron_job_token'] = $this->language->get('help_cron_job_token');
 		$data['help_cron_job_url'] = $this->language->get('help_cron_job_url');
 
+		$data['text_widget_manual_title'] = $this->language->get('text_widget_manual_title');
+		$data['text_widget_manual_desc1'] = $this->language->get('text_widget_manual_desc1');
+		$data['text_widget_manual_desc2'] = $this->language->get('text_widget_manual_desc2');
+		$data['text_widget_manual_note'] = $this->language->get('text_widget_manual_note');
+
 		$this->response->setOutput($this->load->view('extension/payment/payflex', $data));
 	}
 
