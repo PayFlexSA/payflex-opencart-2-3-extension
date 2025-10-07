@@ -1,28 +1,65 @@
-PayFlex module for OpenCart
+# PayFlex OpenCart Extension
 
-PayFlex OpenCart Module v1.0 for OpenCart v2.3
--------------------------------------------------------
+PayFlex payment module for OpenCart v2.3
 
-INTEGRATION:
-1. Unzip the module to a temporary location on your computer
-2. Copy the “upload” folder in the archive to your base “OpenCart” folder
-- This should NOT overwrite any existing files or folders and merely supplement them with the Payflex files
-- This is however, dependent on the FTPprogram you use
-3. Login to the admin section of your OpenCart installation
-4. Navigate to the Extensions > Payments page
-5. Scroll down to the Payflex payment method and click the “Install” button to install the module
-6. Once the module is installed, click on “Edit” button.
-7. The Payflex options will then be shown, select the payment status for “completed”, “failed” and “pending” payments, select the sandbox mode, enable the payment module and click “Save”.
-8. The module is now ready to be tested with the Sandbox. To test with the sandbox.
+## Overview
 
-How can I test that it is working correctly?
-If you followed the installation instructions above, the module is in “test” mode and you can test it by purchasing from your site as a buyer normally would. You will be redirected to payflex for payment and can login with the user account.
+This extension integrates PayFlex's "Buy Now, Pay Later" payment solution with OpenCart 2.3, allowing customers to split their purchases into interest-free installments.
 
+## Installation
 
-******************************************************************************
+1. **Download and Extract**
+   - Download the module archive
+   - Extract to a temporary location on your computer
 
-    Please see the URL below for all information concerning this module:
+2. **Upload Files**
+   - Copy the contents of the "upload" folder to your OpenCart root directory
+   - This will add PayFlex files without overwriting existing OpenCart files
 
-                 https://www.payflex.co.za
+3. **Install Module**
+   - Log in to your OpenCart admin panel
+   - Navigate to **Extensions > Payments**
+   - Find "PayFlex" in the payment methods list
+   - Click the **Install** button
 
-******************************************************************************
+4. **Configure Module**
+   - Click the **Edit** button next to PayFlex
+   - Configure the following settings:
+     - Payment status for completed orders
+     - Payment status for failed orders
+     - Payment status for pending orders
+     - Sandbox mode (for testing)
+     - Enable/disable the payment method
+   - Click **Save** to apply changes
+
+5. **Testing**
+   - The module is now ready for testing in sandbox mode
+   - Ensure all payment flows work correctly before going live
+
+## Manual Widget Installation
+
+**Note:** OpenCart 2.3 uses hardcoded templates, so the product page widget must be added manually.
+
+To add the PayFlex calculator widget to your product pages:
+
+1. Locate your product template file:
+   ```
+   catalog/view/theme/[your_theme]/template/product/product.tpl
+   ```
+
+2. Find where you want the widget to display (typically near the price or add-to-cart button)
+
+3. Insert the following code:
+   ```html
+   <div class="payflex-widget">
+     <script async 
+             src="https://widgets.payflex.co.za/payflex-widget-2.0.0.js?type=calculator&amount=<?php echo $price; ?>" 
+             type="application/javascript">
+     </script>
+   </div>
+   ```
+
+## Support
+
+For technical support and documentation, visit:
+**https://www.payflex.co.za**
