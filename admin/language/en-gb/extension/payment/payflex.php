@@ -48,6 +48,5 @@ $_['help_cron_job_token']			= 'Make this long and hard to guess';
 
 // Product page widget manually adding info
 $_['text_widget_manual_title']		= 'Product Page Widget - Manual Adding';
-$_['text_widget_manual_desc1']		= 'To manually add the PayFlex product page widget to your product page template, copy and paste the code below into your product template (e.g. catalog/view/theme/[your_theme]/template/product/product.tpl) where you would like the widget to appear:';
-$_['text_widget_manual_desc2']		= 'For example, in the default theme, to add the widget above the price, you can add it right after <?php if ($price) { ?> to start with.';
-$_['text_widget_manual_note']		= 'Note: Replace [PRODUCT_PRICE] with the dynamic price variable from your template, e.g. <?php echo $price; ?>';
+$_['text_widget_manual_desc1']		= 'To manually add the PayFlex product page widget to your product page template, you will need to manually edit your template file (e.g. catalog/view/theme/[your_theme]/template/product/product.tpl) and add the script to where you would like the widget to appear';
+$_['text_widget_manual_link_text']	= 'Detailed instructions can be found here';

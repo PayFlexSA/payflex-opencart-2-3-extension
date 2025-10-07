@@ -166,12 +166,8 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-sort"><?php echo $text_widget_manual_title; ?></label>
             <div class="col-sm-10">
-              <p> <?php echo $text_widget_manual_desc1; ?></p>
-              <p> <?php echo $text_widget_manual_desc2; ?></p>
-            <pre>
-  &lt;div class="payflex-widget"&gt;
-    &lt;script async src="https://widgets.payflex.co.za/payflex-widget-2.0.0.js?type=calculator&amount=&lt;?php echo $price; ?&gt;" type="application/javascript"&gt;&lt;/script&gt;
-  &lt;/div&gt;</pre>
+              <p><?php echo $text_widget_manual_desc1; ?></p>
+              <p><a href="https://github.com/PayFlexSA/payflex-opencart-2-3-extension#manual-widget-installation" target="_blank"><?php echo $text_widget_manual_link_text; ?></a></p>
             </div>
           </div>
 
